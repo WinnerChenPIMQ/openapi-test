@@ -1,0 +1,5 @@
+collection:
+  put:
+    $ref: './putPet.yaml'
+  post:
+    $ref: './postPet.yaml'

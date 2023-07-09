@@ -1,0 +1,23 @@
+tags:
+  - pet
+description: Update an existing pet by Id
+operationId: getPet
+responses:
+  '200':
+    description: Successful operation
+    content:
+      application/json:
+        schema:
+          $ref: 'pet/schemas/Pet.yaml'
+      application/xml:
+        schema:
+          $ref: 'pet/schemas/Pet.yaml'
+  '400':
+    description: Invalid ID supplied
+  '404':
+    description: Pet not found
+  '405':
+    description: Validation exception
+security:
+  - petstore_auth:
+      - read:pets
